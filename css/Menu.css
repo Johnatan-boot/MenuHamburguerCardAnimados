@@ -1,0 +1,288 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.wrapper{
+    background:linear-gradient(-45deg, red);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: backgroundtransition 8s ease-in-out infinite;
+}
+
+.portfolio{
+    width: 180px;
+    font-size: 9px;
+    position: relative;
+    top: 230px;
+    right: 235px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: yellow;
+    font-family: segoe script;
+    
+
+}
+.portfolio span{
+    position: relative;
+    right:12px;
+}
+
+
+.social-media{
+    margin-top: 1rem;
+    display: flex;
+   
+}
+
+.linkportfolio{
+    position: relative;
+    bottom: 190px;
+    right: 435px;
+}
+
+a{  
+    position: relative;
+    top: 280px;
+    right: 1200px;
+    text-decoration: none;
+    color: yellow;
+    font-size: 10px;
+    padding: 1rem 1rem;
+    border: 1px solid rgb(243, 247, 3);
+    min-width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 5s cubic-bezier(0.55, 0025,0.675,0.97);
+   
+}
+
+a:hover{
+    color: rgb(255, 196, 0);
+    background-color: rgb(252, 207, 8);
+}
+
+.checkbox{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    cursor:pointer;
+}
+
+.checkbox .trace{
+    width: 90px;
+    height: 8px;
+    background-color: rgb(248, 252, 6);
+    position: absolute;
+    border-radius: 4px;
+    transition: 0.5s ease-in-out;
+}
+
+.checkbox  .trace:nth-child(1){
+    top: 26px;
+    transform: rotate(0);
+}
+.checkbox  .trace:nth-child(2){
+    top: 46px;
+    transform: rotate(0);
+}
+.checkbox  .trace:nth-child(3){
+    top: 64px;
+    transform: rotate(0);
+}
+
+#toggle{
+    display: none;
+
+}
+
+#toggle:checked + .checkbox .trace:nth-child(1){
+    transform: rotate(45deg);
+    top: 47px;
+}
+#toggle:checked + .checkbox .trace:nth-child(2){
+   transform: translateX(-100px);
+   width: 30px;
+   visibility: hidden;
+   opacity: 0;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(3){
+    transform: rotate(-45deg);
+    top: 48px;
+}
+
+body{
+    font-family: sans-serif;
+    background:linear-gradient(-45deg,rgb(252, 5, 5),
+    rgb(252, 8, 12),rgb(252, 9, 11));
+
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    height: 400px;
+    width: 200px;
+    background-image: url("/imagens/ironman.jpg");
+    border-radius: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(0.5);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    left: 5px;
+}
+
+.card-wrapper{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card-wrapper::before{
+    content: '';
+    position: absolute;
+    height: 45px;
+    width: 110px;
+    display: block;
+    border: 1px solid white;
+    opacity: 0s;
+   transition: 0.3s;
+}
+
+.card-wrapper h2{
+    font-family: segoe script;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+    transition: 0.3s;
+    color: rgb(255, 255, 2);
+    
+
+
+}
+
+
+.card-wrapper p{
+    font-family: segoe script;
+    font-size: 0;
+    visibility: hidden;
+    opacity: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+    color: rgb(255, 0, 0);
+}
+
+.card:hover{
+    filter: unset;
+}
+
+.card:hover > .card-wrapper::before{
+    height: 90px;
+    width: 158px;
+    
+}
+.card:hover > .card-wrapper p{
+    opacity: 1;
+    visibility: visible;
+    font-size: 14px;
+    
+}
+
+.main{
+    height: 100vh;
+    width: 100vw;
+    
+    background-size: 400%, 400%;
+}
+
+@keyframes backgroundtransition {
+    0%{
+        background-position: 0% 80%;
+    }
+    50%{
+        background-position: 0% 100%;
+    }
+    50%{
+        background-position: 0% 90%;
+    }
+}
+
+
+
+.menu-btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+   border: 3px solid #fff;
+
+}
+
+.menu-btn__burger{
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+
+}
+
+.menu-btn__burger::before{
+    transform: translateY(-16px);
+    
+}
+.menu-btn__burger::after{
+    transform: translateY(16px);
+
+}
+
+
+
+
