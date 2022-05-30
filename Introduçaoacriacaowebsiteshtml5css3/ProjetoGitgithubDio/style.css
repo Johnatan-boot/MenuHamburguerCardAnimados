@@ -1,0 +1,48 @@
+#title,.subtitle,.post__title{
+    color: blue;
+    font-family: segoe script;
+}
+
+.post__title{
+    font-size: 16px;
+    font-family: segoe script;
+}
+
+#imagem__header, .post__imagem{
+    height: 300px;
+    width: 300px;
+    border-radius: 80px;
+    border: 2px solid grey;
+    
+}
+#imagem__header{
+   position: relative;
+   left: 250px;
+}
+
+body{
+    background-color: rgb(238, 236, 236);
+}
+.post__paragrafo{
+    padding: 15px 15px;
+}
+
+.container{
+    background-color: black;
+    width: 700px;
+    height: 200px;
+    color: gold;
+    border-radius: 12px;
+}
+a{
+    color: green;
+    text-decoration: none;
+}
+
+ol{
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    border-radius: 15px;
+    color: green;
+}
